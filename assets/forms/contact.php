@@ -5,7 +5,7 @@ $subject = "Website Contact us: ".$_POST['subject'];
 $message = $_POST['message'];
 
 $mail_header = "From: ".$name."<".$email.">\r\n";
-$reception = "cegres1@gmail.com";
+$reception = "info@omega-opci.com";
 
 mail($reception,$subject,$message,$mail_header)
 or die("Error!");
