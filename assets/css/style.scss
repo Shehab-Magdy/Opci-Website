@@ -1823,3 +1823,33 @@ section {
 .icon-box{
   min-height: 125px;
 }
+
+
+
+/* Center the loader */
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  background-color: rgba(white, 0.99);
+  background-color: rgba(black, 0.90);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & img{
+    width: auto;
+    height: 100px;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#loaderDiv {
+  display: none;
+  text-align: center;
+}

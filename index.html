@@ -28,15 +28,18 @@
          * License: https://bootstrapmade.com/license/
          ======================================================== -->
    </head>
-   <body>
-      <!-- ======= Header ======= -->
+   <body onload="myFunction()" style="margin:0;">
+      <div id="loader">
+         <img src="assets/opciAnimatedLogo2.gif" alt="Animated Logo">
+      </div>
+         <!-- ======= Header ======= -->
       <header id="header" class="fixed-top d-flex align-items-center">
          <div class="container d-flex align-items-center">
             <!-- <h1 class="logo me-auto"><a href="index.html"><img src="./assets/img/SVG/OpciLogo.svg" alt=""><span>.</span></a></h1> -->
             <!-- Uncomment below if you prefer to use an image logo -->
             <a href="index.html" class="logo me-auto">
                <!-- <img src="assets/img/SVG/OpciLogo.svg" alt="OPCI Logo"> -->
-               <img src="assets/img/AnimatedLogo.gif" alt="OPCI Logo">
+               <img src="assets/img/SVG/OpciLogo.svg" alt="OPCI Logo">
                <h3>OPCI</h3>
             </a>
             <nav id="navbar" class="navbar order-last order-lg-0">
@@ -478,7 +481,19 @@
             </div>
          </div>
       </footer>
-      <!-- End Footer -->
+      <script>
+         var myVar;
+         
+         function myFunction() {
+           myVar = setTimeout(showPage, 15000);
+         }
+         
+         function showPage() {
+           document.getElementById("loader").style.display = "none";
+           document.getElementById("loaderDiv").style.display = "block";
+         }
+         </script>
+<!-- End Footer -->
       <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
       <!-- Vendor JS Files -->
       <script src="assets/vendor/purecounter/purecounter.js"></script>
