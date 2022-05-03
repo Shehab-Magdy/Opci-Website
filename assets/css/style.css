@@ -2285,7 +2285,7 @@ section {
 
 #loader img {
   width: auto;
-  height: 100px;
+  height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
   display: -webkit-box;
