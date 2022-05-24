@@ -32,8 +32,8 @@
          ======================================================== -->
 </head>
 
-<body style="margin:0;">
-   
+<body>
+
    <!-- ======= Header ======= -->
    <header id="header" class="fixed-top d-flex align-items-center">
       <div class="container d-flex align-items-center">
@@ -60,17 +60,63 @@
    <!-- End Header -->
    <!-- ======= Hero Section ======= -->
    <section id="hero" class="d-flex align-items-center">
-      <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+         <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+         </ol>
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <img class="d-block w-100" src="./assets/img/001.jpeg" alt="First slide">
+               <div class="container textAboveSlider" data-aos="zoom-out" data-aos-delay="100">
          <div class="row">
             <div class="col-xl-6">
-               <h1>Welcome to Omega pharmaceutical and chemical industries OPCI world</h1>
+               <h1>Welcome to Omega pharmaceutical and chemical industries <span class="opciRedColor">OPCI</span> world</h1>
                <h2>We are a large team, specialized in the pharmaceutical industry</h2>
                <h2>Together for better life</h2>
                <a href="#about" class="btn-get-started scrollto">Get Started</a>
             </div>
          </div>
       </div>
-   </section>
+   </div>
+   <div class="carousel-item">
+      <img class="d-block w-100" src="./assets/img/002.jpeg" alt="Second slide">
+      <div class="container textAboveSlider" data-aos="zoom-out" data-aos-delay="100">
+         <div class="row">
+            <div class="col-xl-6">
+               <h1>Better digital experience with <span class="opciRedColor">OPCI</span> Pharmaceutical
+                  Production</h1>
+               <h2>We are a large team, specialized in the pharmaceutical industry</h2>
+               <a href="#about" class="btn-get-started scrollto">Get Started</a>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="carousel-item">
+      <img class="d-block w-100" src="./assets/img/003.jpeg" alt="Third slide">
+      <div class="container textAboveSlider" data-aos="zoom-out" data-aos-delay="100">
+         <div class="row">
+            <div class="col-xl-6">
+               <h1>Better digital experience with <span class="opciRedColor">OPCI</span> Pharmaceutical
+                  Production</h1>
+               <h2>We are a large team, specialized in the pharmaceutical industry</h2>
+               <a href="#about" class="btn-get-started scrollto">Get Started</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+   <span class="sr-only"></span>
+</a>
+<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+   <span class="carousel-control-next-icon" aria-hidden="true"></span>
+   <span class="sr-only"></span>
+</a>
+</div>
+</section>
    <!-- End Hero -->
    <main id="main">
       <!-- ======= About Section ======= -->
@@ -94,7 +140,7 @@
                         <br>
                         <br>
                         Omegacough (levodropropizine) the first peripheral antitussive that does not affect the
-                        cough center is a safe product for children. 
+                        cough center is a safe product for children.
                         <br>
                         <br>
                         Dostilact (Cabergoline) reduces the level of
@@ -418,7 +464,8 @@
                               <h3>Omegapredine (Dalfampridine 10mg)
                               </h3>
                               <p>
-                                 Omegapredine (Dalfampridine 10mg) Treatment to improve walking in patients with multiple sclerosis.
+                                 Omegapredine (Dalfampridine 10mg) Treatment to improve walking in patients with
+                                 multiple sclerosis.
                               </p>
                            </div>
                            <div class="col-lg-6 order-1 order-lg-2 text-center">
@@ -432,7 +479,9 @@
                               <h3>Rofloair (Roflumilast 0.5 mg)
                               </h3>
                               <p>
-                                 Rofloair (Roflumilast 0.5 mg) Orally administration drug for the treatment of inflammatory conditions Of the lungs such as chronic obstructive pulmonary disease (COPD).
+                                 Rofloair (Roflumilast 0.5 mg) Orally administration drug for the treatment of
+                                 inflammatory conditions Of the lungs such as chronic obstructive pulmonary disease
+                                 (COPD).
                               </p>
                            </div>
                            <div class="col-lg-6 order-1 order-lg-2 text-center">
@@ -563,11 +612,17 @@
          </div>
       </div>
    </footer>
-   
+
    <!-- End Footer -->
    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
          class="bi bi-arrow-up-short"></i></a>
    <!-- Vendor JS Files -->
+   <script>
+      $('.carousel').carousel({
+         interval: 1000
+      })
+   </script>
+
    <script src="assets/vendor/purecounter/purecounter.js"></script>
    <script src="assets/vendor/aos/aos.js"></script>
    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -577,6 +632,8 @@
    <script src="assets/vendor/php-email-form/validate.js"></script>
    <!-- Template Main JS File -->
    <script src="assets/js/main.js"></script>
+   <script src="assets/js/jquery-3.4.1.js"></script>
+   <script src="assets/js/bootstrap.js"></script>
 </body>
 
 </html>
