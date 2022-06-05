@@ -8,7 +8,7 @@ $mail_header = "From: ".$name."<".$email.">\r\n";
 $reception = "info@omega-opci.com";
 
 mail($reception,$subject,$message,$mail_header)
-or die("Error!");
+or die("Info!");
 
 echo'Message sent';
 
