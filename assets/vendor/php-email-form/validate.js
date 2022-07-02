@@ -26,8 +26,7 @@
       thisForm.querySelector('.sent-message').classList.remove('d-block');
 
       let formData = new FormData( thisForm );
-
-      if ( recaptcha ) {
+	if ( recaptcha ) {
         if(typeof grecaptcha !== "undefined" ) {
           grecaptcha.ready(function() {
             try {
@@ -38,7 +37,7 @@
               })
             } catch(error) {
               displayError(thisForm, error)
-            }
+           }
           });
         } else {
           displayError(thisForm, 'The reCaptcha javascript API url is not loaded!')
@@ -63,14 +62,19 @@
       }
     })
     .then(data => {
-      thisForm.querySelector('.loading').classList.remove('d-block');
-      if (data.trim() == 'OK') {
-        thisForm.querySelector('.sent-message').classList.add('d-block');
-        thisForm.reset(); 
-      } else {
-        throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
+      if(action.includes("Subscribers")){
+        alert(data)
       }
-    })
+      else{
+              thisForm.querySelector('.loading').classList.remove('d-block');
+        if (data.length <= 10) {
+          thisForm.querySelector('.sent-message').classList.add('d-block');
+          thisForm.reset(); 
+        } else {
+          throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
+        }
+      }
+         })
     .catch((error) => {
       displayError(thisForm, error);
     });
@@ -81,5 +85,11 @@
     thisForm.querySelector('.error-message').innerHTML = error;
     thisForm.querySelector('.error-message').classList.add('d-block');
   }
-
+var Subscribe_form = document.getElementById('Subscribe_form');
+  Subscribe_form.addEventListener('submit', function(event) {
+    event.preventDefault();
+     let formData = new FormData( Subscribe_form );
+    let action = Subscribe_form.getAttribute('action');
+    php_email_form_submit(Subscribe_form, action, formData);  
+  })
 })();

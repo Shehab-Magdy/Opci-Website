@@ -8,8 +8,8 @@ $mail_header = "From: ".$name."<".$email.">\r\n";
 $reception = "info@omega-opci.com";
 
 mail($reception,$subject,$message,$mail_header)
-or die("Info!");
+or die("success!");
 
-echo'Message sent';
+echo "Thank You!";
 
 ?>

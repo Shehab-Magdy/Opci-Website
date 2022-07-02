@@ -7,7 +7,6 @@ $reception = "sales@omega-opci.com";
 
 mail($reception,$subject,$message,$mail_header)
 or die("Info!");
-
-echo'Message sent';
+echo "Thank You!";
 
 ?>
